@@ -12,4 +12,4 @@ cd "data"
 
 :: Install dependencies and start the project
 echo The app is loading, please wait.
-npm start >null 2>&1
+npm start >nul 2>&1
