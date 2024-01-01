@@ -1,0 +1,53 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Minimum height of the viewport */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse; /* Ensures that the borders of the cells are joined */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Maximum width */
+}
+
+table, th, td {
+  border: 1px solid black; /* Border for the table, th, and td elements */
+  margin: 20px;
+}
+
+th, td {
+  padding: 8px; /* Padding inside each cell */
+  text-align: left; /* Align text to the left; adjust as needed */
+}
+
+thead {
+  background-color: #f2f2f2; /* Background color for the header */
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  width: 300px; /* Width of the drop zone */
+  height: 100px; /* Height of the drop zone */
+  align-self: center; /* Align drop zone in the center */
+}
+
+.drop-zone:hover {
+  background-color: #f8f8f8;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.button-container button {
+  margin: 0 10px; /* Spacing between buttons */
+}
