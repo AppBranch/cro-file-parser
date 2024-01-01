@@ -40,7 +40,7 @@ These instructions will guide you through the installation and running processes
 
 ### Stopping the Application
 
-- To stop the application, return to the command prompt window where `RUN.bat` was run and press any key to terminate the process.
+- To stop the application, return to the command prompt window where `RUN.bat` was run and close it (or press CTRL+C).
 
 ## Troubleshooting
 
