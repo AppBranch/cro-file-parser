@@ -2,12 +2,6 @@
 
 CRO File Parser is a proprietary software developed by AppBranch S.R.L. It is designed to parse `.cro` files and provide a user-friendly interface for data manipulation and analysis.
 
-## License
-
-This software is proprietary to AppBranch S.R.L. and is distributed under a custom license. It is free to use, distribute, and modify for non-commercial purposes. However, it is not permitted to charge money for the software or any derivatives thereof, whether in modified form or as part of another product or project.
-
-For full license details, please see the LICENSE file included with this distribution.
-
 ## Getting Started
 
 These instructions will guide you through the installation and running processes of the CRO File Parser on your local machine.
@@ -47,10 +41,14 @@ These instructions will guide you through the installation and running processes
 - **Installation Issues**: If you encounter any issues during installation, ensure you run `INSTALL.bat` with administrative privileges.
 - **Running Issues**: Make sure to run `RUN.bat` after successfully completing the installation process.
 
-## Contributing
-
-While this software is free to use, distribute, and modify, as a proprietary product of AppBranch S.R.L, it is not permitted to charge for the software or any derivatives thereof. Contributions to the project are welcome, but the same licensing restrictions apply.
-
 ## Questions and Support
 
-For questions and support, please contact AppBranch S.R.L.
+For questions and support, please create an issue on GitHub.
+
+## Contributing
+
+Feel free to fork this repository and contribute to the development of CRO File Parser. Pull requests are welcome.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
