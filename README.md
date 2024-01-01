@@ -1,6 +1,6 @@
 # CRO File Parser
 
-CRO File Parser is a proprietary software developed by AppBranch S.R.L. It is designed to parse `.cro` files and provide a user-friendly interface for data manipulation and analysis.
+CRO File Parser is a open-source software developed started by AppBranch. It is designed to parse `.cro` files and provide a user-friendly interface for data manipulation and analysis.
 
 ## Getting Started
 
@@ -40,10 +40,6 @@ These instructions will guide you through the installation and running processes
 
 - **Installation Issues**: If you encounter any issues during installation, ensure you run `INSTALL.bat` with administrative privileges.
 - **Running Issues**: Make sure to run `RUN.bat` after successfully completing the installation process.
-
-## Questions and Support
-
-For questions and support, please create an issue on GitHub.
 
 ## Contributing
 
