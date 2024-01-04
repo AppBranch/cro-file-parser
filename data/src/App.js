@@ -19,10 +19,11 @@ function App() {
         const name = parts[6].split(" ")[0].replace("/", "");
         const code = parts[6].split(" ")[1].replace("/", "");
 
-        const key = `${length}-${width}-${name}-${code}`;
+        const key = `${length}-${width}-${code}`;
 
         if (entriesMap[key]) {
           entriesMap[key].count += 1;
+          entriesMap[key].name = `${entriesMap[key].name}, ${name}`;
         } else {
           entriesMap[key] = { length, width, name, code, count: 1 };
         }
@@ -143,27 +144,36 @@ function App() {
     let currentMaterialStart = rowNumber;
     let previousMaterial = null;
 
-    data.forEach((item, index) => {
-      const row = [
-        index + 1,
-        item.name,
-        item.code,
-        item.length,
-        item.width,
-        item.count,
-      ];
-      XLSX.utils.sheet_add_aoa(ws, [row], { origin: `A${rowNumber}` });
+    // Group data by material
+    const groupedData = data.reduce((acc, item) => {
+      acc[item.code] = acc[item.code] || [];
+      acc[item.code].push(item);
+      return acc;
+    }, {});
 
-      if (previousMaterial !== item.code && previousMaterial !== null) {
-        materialMergeRanges.push({
-          s: { r: currentMaterialStart - 1, c: 2 },
-          e: { r: rowNumber - 2, c: 2 },
-        });
-        currentMaterialStart = rowNumber;
-      }
-      previousMaterial = item.code;
+    Object.entries(groupedData).forEach(([material, items]) => {
+      items.forEach((item, index) => {
+        const row = [
+          index + 1,
+          item.name,
+          material,
+          item.length,
+          item.width,
+          item.count,
+        ];
+        XLSX.utils.sheet_add_aoa(ws, [row], { origin: `A${rowNumber}` });
 
-      rowNumber++;
+        if (previousMaterial !== item.code && previousMaterial !== null) {
+          materialMergeRanges.push({
+            s: { r: currentMaterialStart - 1, c: 2 },
+            e: { r: rowNumber - 2, c: 2 },
+          });
+          currentMaterialStart = rowNumber;
+        }
+        previousMaterial = item.code;
+
+        rowNumber++;
+      });
     });
 
     // Add the last material merge range
